@@ -15,10 +15,20 @@ int main()
     for(int i = 0; i < 26; i++) cnt[i] = 0;
 
     for(int i = 0; i < sz; i++) {
-        cnt[s['a' - i]]++;
+        cnt[s[i]-'a']++;
     }
 
-    for(int i = 0; i < 26; i++) cout << cnt[i] << ' ';
+    bool flag = 1;
+    int ans;
+    for(int i = 0; i < 26; i++) {
+        if(cnt[i] == 0) {
+            ans = i; flag = 0;
+            break;
+        }
+    }
+
+    if(flag) cout << "None\n";
+    else cout << char(ans+'a') << '\n';
 
     return 0;
 }
