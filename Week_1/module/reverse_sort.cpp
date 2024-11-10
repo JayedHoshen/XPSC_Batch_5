@@ -14,9 +14,9 @@ int main()
 
     // reverse(v.begin(), v.end());
     
-    // sort(v.begin(), v.end());
-    // sort(v.rbegin(), v.rend());
-    // sort(v.begin(), v.end(), greater<int>());
+    // sort(v.begin(), v.end()); // asc
+    // sort(v.rbegin(), v.rend()); // dsc
+    // sort(v.begin(), v.end(), greater<int>()); // dsc
 
     for(auto val : v) cout << val << " ";
     cout << '\n';

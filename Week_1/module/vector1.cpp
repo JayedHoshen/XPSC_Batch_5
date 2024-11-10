@@ -30,7 +30,7 @@ int main()
     // cout << v.empty() << '\n';
     // cout << v.size() << '\n';
 
-    // for(int i = 0; i < n; i++) cout << v[i] << " ";
+    // for(int i = 0; i < v.size(); i++) cout << v[i] << " ";
     // cout << '\n';
 
     // v.clear();
@@ -40,7 +40,7 @@ int main()
     vector <int> v(n);
 
     // v.assign(n, 10);
-    for(int i = 0; i < n; i++) cin >> v[i];
+    for(int i = 0; i < v.size(); i++) cin >> v[i];
 
     v.resize(n/2, 2);
 

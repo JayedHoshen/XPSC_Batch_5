@@ -17,8 +17,9 @@ int main()
 
 
     auto mx = max_element(v.begin(), v.end());
-    int mxPosition = mx - v.begin();
     cout << *mx <<'\n';
+    
+    int mxPosition = mx - v.begin();
     cout << mxPosition << '\n';
 
     return 0;

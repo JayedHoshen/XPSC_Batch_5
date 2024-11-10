@@ -19,8 +19,9 @@ int main()
     // auto it = --v.end();
     // cout << *it2 << '\n';
 
-    // for(auto it = v.begin(); it != v.end(); it++) cout << *it << " ";
-    // cout << '\n';
+    for(auto it = v.begin(); it != v.end(); it++) cout << *it << " ";
+    cout << '\n';
+    
     // reverse vector
     // for(auto it = v.rbegin(); it != v.rend(); it++) cout << *it << " ";
     // cout << '\n';

@@ -9,12 +9,15 @@ int main()
     int n;
     cin >> n;
 
-    deque <int> dq;
-    for(int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        dq.push_back(x);
-    }
+    // deque <int> dq;
+    // for(int i = 0; i < n; i++) {
+    //     int x;
+    //     cin >> x;
+    //     dq.push_back(x);
+    // }
+
+    deque <int> dq(n);
+    for(int i = 0; i < n; i++) cin >> dq[i];
 
     dq.push_front(5);
     dq.push_back(2);
