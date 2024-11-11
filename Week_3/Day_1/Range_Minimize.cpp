@@ -18,12 +18,11 @@ int main()
 
         sort(v.begin(), v.end());
 
-        auto it = v.rbegin();
-        if(it != v.end()) {
-            v.pop_back();
-            v.pop_back();
-        }
-        
+        v.pop_back();
+        v.pop_back();
+
+        cout << v.back() - v.front() << '\n';
+
         for(auto val : v) cout << val << " ";
         cout << '\n';
     }
