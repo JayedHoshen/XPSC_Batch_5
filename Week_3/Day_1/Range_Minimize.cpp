@@ -16,15 +16,16 @@ int main()
         vector <int> v(n);
         for(int i = 0; i < n; i++) cin >> v[i];
 
+        if(n <= 3) {
+            cout << 0 << '\n';
+            continue;
+        }
+
         sort(v.begin(), v.end());
 
-        v.pop_back();
-        v.pop_back();
+        int mn = min({v[n-1]-v[2], v[n-2]-v[1], v[n-3]-v[0]});
 
-        cout << v.back() - v.front() << '\n';
-
-        for(auto val : v) cout << val << " ";
-        cout << '\n';
+        cout << mn << '\n';
     }
 
     return 0;
