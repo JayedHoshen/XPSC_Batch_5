@@ -11,23 +11,24 @@ int main()
 
     stack <string> st;
     while(tc--) {
-        string s; cin >> s;
-
-        int n = s.size();
-        string ss = s.substr(n-2);
-        st.push(ss);
+        string s;
+        cin >> s;
+        st.push(s);
     }
 
+    unordered_set <string> us;
     vector <string> v;
+
     while(!st.empty()) {
-        v.push_back(st.top());
+        if(us.find(st.top()) == us.end()) v.push_back(st.top());
+        us.insert(st.top());
         st.pop();
     }
 
-    int n = v.size();
-    for(int i = 0; i < n-1; i++) {
-        
-    } 
+    for(auto val : v) {
+        int sz = val.size();
+        cout << val[sz-2] << val[sz-1];
+    }
     cout << '\n';
 
     return 0;
